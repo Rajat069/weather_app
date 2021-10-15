@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap");
+* {
+  font-family: "Raleway", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  font-size: 120%;
+}
+
+.card {
+  background: #e0e1e3c4;
+  color: rgb(0, 0, 0);
+  padding: 2em;
+  border-radius: 30px;
+  width: 500px;
+  margin: 1em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search1 {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7cad;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7cad;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+.search-bar ::placeholder {
+  color: white;
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  position: relative;
+  left: 190px;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading";
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 210px;
+}
+.weather {
+  text-align: center;
+}
+#location {
+  background-color: #7c7c7cad;
+  color: black;
+  width: 174px;
+  height: 38px;
+  border: none;
+  font-size: 22px;
+  border-radius: 24px;
+  font-weight: 800;
+}
+#location:hover {
+  transform: scale(1.1);
+  background-color: #8d8d8dcc;
+}
+#btn {
+  position: absolute;
+  bottom: 90px;
+  left: 100px;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+#h11 {
+  font-size: 55px;
+  position: absolute;
+  left: 560px;
+  top: 50px;
+  color: rgba(243, 243, 243, 0.685);
+  font-size: bold;
+  font-family: "Red Hat Display", sans-serif;
+}
+@media screen and (max-width: 750px) {
+  #h11 {
+    position: relative;
+    top: -179px;
+    left: 218px;
+    font-size: 42px;
+  }
+  .card {
+    width: 400px;
+    position: relative;
+    left: -75px;
+    bottom: -115px;
+  }
+  #location {
+    position: relative;
+    bottom: -121px;
+    left: -62px;
+  }
+  .flex {
+    position: relative;
+    bottom: -11px;
+    left: 56px;
+  }
+}
