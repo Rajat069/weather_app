@@ -15,11 +15,11 @@ body {
 }
 
 .card {
-  background: #e0e1e3c4;
+  background: #a16eed;
   color: rgb(0, 0, 0);
   padding: 2em;
   border-radius: 30px;
-  width: 500px;
+  width: 460px;
   margin: 1em;
 }
 
@@ -36,10 +36,13 @@ body {
   height: 44px;
   width: 44px;
   outline: none;
-  background: #7c7c7cad;
-  color: white;
+  background: whitesmoke;
+  color: black;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+}
+#search1:hover {
+  transform: scale(1.1);
 }
 
 input.search-bar {
@@ -47,8 +50,8 @@ input.search-bar {
   outline: none;
   padding: 0.4em 1em;
   border-radius: 24px;
-  background: #7c7c7cad;
-  color: white;
+  background: white;
+  color: black;
   font-family: inherit;
   font-size: 105%;
   width: calc(100% - 100px);
@@ -57,12 +60,8 @@ input.search-bar {
   color: white;
 }
 
-button:hover {
-  background: #7c7c7c6b;
-}
-
 h1.temp {
-  margin: 0;
+  margin: -1.5rem;
   margin-bottom: 0.4em;
 }
 
@@ -71,6 +70,7 @@ h1.temp {
   left: 170px;
   display: flex;
   align-items: center;
+  margin-top: -1rem;
 }
 
 .description {
@@ -96,38 +96,84 @@ h1.temp {
 .weather {
   text-align: center;
 }
-#location {
-  background-color: #7c7c7cad;
-  color: black;
-  width: 174px;
-  height: 38px;
+
+.cssbuttons-io-button {
+  background: #a370f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
   border: none;
-  font-size: 22px;
-  border-radius: 24px;
-  font-weight: 800;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
 }
-#location:hover {
-  transform: scale(1.1);
-  background-color: #8d8d8dcc;
-}
-#btn {
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
   position: absolute;
-  bottom: 90px;
-  left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+#location {
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
 }
 ::placeholder {
   color: rgb(0, 0, 0);
   opacity: 1;
 }
-
-#h11 {
-  font-size: 55px;
-  position: absolute;
-  left: 560px;
-  top: 50px;
-  color: rgba(243, 243, 243, 0.685);
-  font-size: bold;
-  font-family: "Red Hat Display", sans-serif;
+#text {
+  margin: -3rem;
+  background: black;
+  color: white;
+  text-align: center;
+  height: 4rem;
+  width: 33.55rem;
+  position: relative;
+  top: -3.6rem;
+  left: 0.6rem;
+}
+#text h3 {
+  font-size: 2.2rem;
+  position: relative;
+  top: 0.6rem;
 }
 @media screen and (max-width: 750px) {
   #h11 {
